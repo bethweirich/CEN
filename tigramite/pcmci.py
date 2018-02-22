@@ -1455,21 +1455,21 @@ if __name__ == '__main__':
         )
     verbosity = 2
 
-    cond_ind_test = ParCorr(
-        significance='analytic',
-        fixed_thres=0.05,
-        sig_samples=100,
+    # cond_ind_test = ParCorr(
+    #     significance='analytic',
+    #     fixed_thres=0.05,
+    #     sig_samples=100,
 
-        use_mask=False,
-        mask_type=['x','y', 'z'],  #  ['x','y','z'],
+    #     use_mask=False,
+    #     mask_type=['x','y', 'z'],  #  ['x','y','z'],
 
-        confidence='analytic',
-        conf_lev=0.9,
-        conf_samples=200,
-        conf_blocklength=10,
+    #     confidence='analytic',
+    #     conf_lev=0.9,
+    #     conf_samples=200,
+    #     conf_blocklength=10,
 
-        recycle_residuals=False,
-        verbosity=verbosity)
+    #     recycle_residuals=False,
+    #     verbosity=verbosity)
 
     # cond_ind_test = GPACE(
     #     significance='analytic',
@@ -1490,23 +1490,23 @@ if __name__ == '__main__':
     #     recycle_residuals=False,
     #     verbosity=verbosity)
 
-    # cond_ind_test = GPDC(
-    #     significance='analytic',
-    #     fixed_thres=0.05,
-    #     sig_samples=2000,
+    cond_ind_test = GPDC(
+        significance='analytic',
+        fixed_thres=0.05,
+        sig_samples=2000,
 
-    #     use_mask=False,
-    #     mask_type=['y'],
+        use_mask=False,
+        mask_type=['y'],
 
-    #     confidence=False,
-    #     conf_lev=0.9,
-    #     conf_samples=200,
-    #     conf_blocklength=None,
+        confidence=False,
+        conf_lev=0.9,
+        conf_samples=200,
+        conf_blocklength=None,
 
-    #     gp_version='new',
-    #     gp_alpha=1.,
-    #     recycle_residuals=False,
-    #     verbosity=verbosity)
+        # gp_version='new',
+        # gp_alpha=1.,
+        recycle_residuals=True,
+        verbosity=verbosity)
 
     # cond_ind_test = CMIsymb(
     #     significance='shuffle_test',
